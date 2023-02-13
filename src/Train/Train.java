@@ -30,6 +30,7 @@ public class Train {
 
     public void showCars(){
         for(int i = 0; i < this.cars.size(); i++) {
+            System.out.print(i + 1 + ". ");
             this.cars.get(i).showInfo();
         }
     }
@@ -38,7 +39,7 @@ public class Train {
         System.out.println();
         for(int i = 0; i < this.cars.size(); i++) {
             if(this.cars.get(i).passengers.size() >= min && this.cars.get(i).passengers.size() <= max) {
-                System.out.println(this.cars.get(i).toString());
+                this.cars.get(i).showInfo();
             }
         }
     }

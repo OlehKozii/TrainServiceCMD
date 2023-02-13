@@ -143,11 +143,8 @@ public class Main {
         System.out.println("\nList of cars");
         String choice;
         Scanner myObj = new Scanner(System.in);
-        for (int i = 0; i < train.getCars().size(); i++) {
-            System.out.print(i + 1 + ". ");
-            myUser.setCommand(new showCarsCommand(train));
-            myUser.executeCommand();
-        }
+        myUser.setCommand(new showCarsCommand(train));
+        myUser.executeCommand();
         System.out.println(train.getCars().size() + 1 + ". Return to main menu");
         choice = myObj.nextLine();
         if (! isNumber(choice) || Integer.parseInt(choice) < 0 || Integer.parseInt(choice) > (train.getCars().size() + 1)) {
